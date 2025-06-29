@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Reminder!</title>
+  <style>
+    body {
+      background-color: #fff0f5;
+      text-align: center;
+      padding-top: 60px;
+      font-family: Arial, sans-serif;
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+      color: #d6336c;
+    }
+    .tenor-gif-embed {
+      margin: 20px auto;
+      max-width: 500px;
+    }
+    .btn {
+      margin-top: 30px;
+      padding: 12px 24px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 10px;
+      background-color: #ff6f91;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      display: none;
+    }
+    .btn:hover {
+      background-color: #ff5073;
+    }
+
+    /* Spinner */
+    .spinner {
+      border: 6px solid #f3f3f3;
+      border-top: 6px solid #ff6f91;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: spin 1s linear infinite;
+      margin: 0 auto 20px auto;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    #loader {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <h1>Abhi tak nhi li !! Fas fas leo jake 😠</h1>
+
+  <!-- Loading Spinner -->
+  <div id="loader" class="spinner"></div>
+
+  <!-- Tenor GIF Embed -->
+  <div id="gif-container" style="display: none;">
+    <div class="tenor-gif-embed" data-postid="2572291053439898286" data-share-method="host" data-aspect-ratio="1.19858" data-width="100%">
+      <a href="https://tenor.com/view/peach-goma-gif-2572291053439898286">Peach Goma Sticker</a> from 
+      <a href="https://tenor.com/search/peach+goma-stickers">Peach Goma Stickers</a>
+    </div>
+  </div>
+
+  <!-- Tenor Embed Script -->
+  <script type="text/javascript" async src="https://tenor.com/embed.js" onload="onTenorLoaded()"></script>
+
+  <!-- Button -->
+  <button id="dawaBtn" class="btn" onclick="window.location.href='yes.html'">Dawa leke click karna</button>
+
+  <script>
+    function onTenorLoaded() {
+      // Show the GIF after slight delay to ensure Tenor renders it
+      setTimeout(() => {
+        document.getElementById('loader').style.display = 'none';
+        document.getElementById('gif-container').style.display = 'block';
+        document.getElementById('dawaBtn').style.display = 'inline-block';
+      }, 1500); // Adjust delay if needed
+    }
+  </script>
+</body>
+</html>

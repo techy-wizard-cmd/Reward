@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dawa Reminder</title>
+  <style>
+    body {
+      background-color: #ffc0cb; /* light pink */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    button {
+      padding: 12px 24px;
+      margin: 10px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .yes {
+      background-color: #90ee90; /* light green */
+    }
+    .yes:hover {
+      background-color: #76d376;
+    }
+    .no {
+      background-color: #f08080; /* light coral */
+    }
+    .no:hover {
+      background-color: #e06666;
+    }
+  </style>
+</head>
+<body>
+  <h1>Good girl dawa leli pakka ?</h1>
+  <button class="yes" onclick="window.location.href='yes.html'">Hn leli</button>
+  <button class="no" onclick="window.location.href='no.html'">Abhi tak nhi li</button>
+</body>
+</html>
